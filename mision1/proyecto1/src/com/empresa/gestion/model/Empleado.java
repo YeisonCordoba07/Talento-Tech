@@ -1,5 +1,5 @@
 package com.empresa.gestion.model;
 
-public class Empleado {
+public class Empleado extends Persona{
     
 }
