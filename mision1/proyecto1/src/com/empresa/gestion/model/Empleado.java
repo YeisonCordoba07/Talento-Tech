@@ -24,7 +24,7 @@ public class Empleado extends Persona{
 
     @Override
     public void presentarse() {
-        System.out.println("Soy el empleado " + getNombre() + " y misalario es " + salario);
+        System.out.println("Soy el empleado " + getNombre() + " y mi salario es " + salario);
     }
 
     
