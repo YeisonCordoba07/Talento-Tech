@@ -3,8 +3,8 @@ package com.empresa.gestion.model;
 public class Gerente extends Empleado{
     private String departamento;
 
-    public Gerente(String nombre, int edad, double salario, String departamento) {
-        super(nombre, edad, salario);
+    public Gerente(String nombre, int edad, double salario, String departamento, boolean activo, char genero) {
+        super(nombre, edad, salario, activo, genero);
         this.departamento = departamento;
     }
 

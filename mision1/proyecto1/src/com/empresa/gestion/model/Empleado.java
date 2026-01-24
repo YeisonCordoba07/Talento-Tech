@@ -5,8 +5,8 @@ public class Empleado extends Persona{
 
 
 
-    public Empleado(String nombre, int edad, double salario){
-        super(nombre, edad);
+    public Empleado(String nombre, int edad, double salario, boolean activo, char genero){
+        super(nombre, edad, activo, genero);
         this.salario = salario;
     }
 
