@@ -1,1 +1,13 @@
 <p>user.component works!</p>
+
+<ul>
+    <li *ngFor="let u of users">
+        {{u.name}} - {{u.email}}
+    </li>
+</ul>
+<ul>
+    
+    @for(u of users; track u.id){
+        <li>{{u.name}} - {{u.email}}</li>
+    }
+</ul>
