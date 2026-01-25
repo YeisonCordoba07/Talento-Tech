@@ -4,9 +4,12 @@ public class Gerente extends Empleado{
     private String departamento;
     private double bono;
 
-    public Gerente(String nombre, int edad, double salario, String departamento, boolean activo, char genero) {
-        super(nombre, edad, salario, activo, genero);
+    public Gerente(String nombre, int edad, char genero,  boolean activo, double salario, int horasTrabajadas, String departamento, double bono) {
+
+        super(nombre, edad, genero, activo, salario, horasTrabajadas);
+        
         this.departamento = departamento;
+        this.bono = bono;
     }
 
 
