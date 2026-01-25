@@ -4,6 +4,8 @@ public class Gerente extends Empleado{
     private String departamento;
     private double bono;
 
+
+
     public Gerente(String nombre, int edad, char genero,  boolean activo, double salario, int horasTrabajadas, String departamento, double bono) {
 
         super(nombre, edad, genero, activo, salario, horasTrabajadas);
@@ -11,6 +13,7 @@ public class Gerente extends Empleado{
         this.departamento = departamento;
         this.bono = bono;
     }
+
 
 
 
@@ -23,12 +26,6 @@ public class Gerente extends Empleado{
     }
 
 
-    
-    @Override
-    public void presentarse() {
-        System.out.println("Soy el gerente " + getNombre()  + " y estoy a cargo del departamento de " + departamento);
-    }
-
     public double getBono() {
         return bono;
     }
@@ -36,5 +33,21 @@ public class Gerente extends Empleado{
     public void setBono(double bono) {
         this.bono = bono;
     }
+
+
+
+    
+    @Override
+    public void presentarse() {
+        System.out.println("Soy el gerente " + getNombre()  + " y estoy a cargo del departamento de " + departamento);
+    }
+
+    @Override
+    public double calcularSalarioMensual(){
+        double salario = super.calcularSalarioMensual();
+        return salario + bono;
+    }
+
+
 
 }
