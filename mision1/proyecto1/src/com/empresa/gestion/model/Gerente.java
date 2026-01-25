@@ -1,21 +1,14 @@
 package com.empresa.gestion.model;
 
-public class Gerente extends Empleado{
+public class Gerente extends Empleado {
     private String departamento;
     private double bono;
 
-
-
-    public Gerente(String nombre, int edad, char genero,  boolean activo, double salario, int horasTrabajadas, String departamento, double bono) {
-
+    public Gerente(String nombre, int edad, char genero, boolean activo, double salario, int horasTrabajadas, String departamento, double bono) {
         super(nombre, edad, genero, activo, salario, horasTrabajadas);
-        
         this.departamento = departamento;
         this.bono = bono;
     }
-
-
-
 
     public String getDepartamento() {
         return departamento;
@@ -25,7 +18,6 @@ public class Gerente extends Empleado{
         this.departamento = departamento;
     }
 
-
     public double getBono() {
         return bono;
     }
@@ -34,20 +26,14 @@ public class Gerente extends Empleado{
         this.bono = bono;
     }
 
-
-
-    
     @Override
     public void presentarse() {
-        System.out.println("Soy el gerente " + getNombre()  + " y estoy a cargo del departamento de " + departamento);
+        System.out.println("Soy el gerente " + getNombre() + " y estoy a cargo del departamento de " + departamento);
     }
 
     @Override
-    public double calcularSalarioMensual(){
+    public double calcularSalarioMensual() {
         double salario = super.calcularSalarioMensual();
         return salario + bono;
     }
-
-
-
 }
