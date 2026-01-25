@@ -10,4 +10,12 @@ public class NominaService {
     public double calcularSalarioAnual(Empleado empleado){
         return empleado.getSalario() * 12;
     }
+
+    public double calcularTotalNomina(double[] salarios){
+        double total = 0;
+        for(int i = 0; i < salarios.length; i++){
+            total = total + salarios[i];
+        }
+        return total;
+    }
 }
