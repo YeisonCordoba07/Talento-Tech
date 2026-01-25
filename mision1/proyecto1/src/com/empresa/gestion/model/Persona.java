@@ -1,10 +1,10 @@
 package com.empresa.gestion.model;
 
 public class Persona {
-    private String nombre;
-    private int edad;
-    private boolean activo;
-    private char genero;
+    protected String nombre;
+    protected int edad;
+    protected boolean activo;
+    protected char genero;
 
 
 

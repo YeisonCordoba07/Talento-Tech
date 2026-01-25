@@ -38,10 +38,29 @@ public class Empleado extends Persona {
     }
 
     public boolean esMayorDeEdad() {
-        return getEdad() >= 18;
+        return edad >= 18;
     }
 
     public boolean puedeTrabajar() {
         return esMayorDeEdad() && isActivo();
+    }
+
+    public String clasificarEmpleado(){
+        if(edad < 18){
+            return "Menor de edad (No puede trabajar)";
+        }
+        else if(edad <= 60){
+            return "Empleado activo";
+        }else{
+            return "Empleado en edad de retiro";
+        }
+    }
+
+    public String obtenerTipoEmpleado(){
+        return switch (genero) {
+            case 'M' -> "Masculino";
+            case 'F' -> "Femenino";
+            default -> "No especificado";
+        };
     }
 }
