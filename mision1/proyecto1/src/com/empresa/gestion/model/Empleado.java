@@ -6,9 +6,10 @@ public class Empleado extends Persona{
 
 
 
-    public Empleado(String nombre, int edad, double salario, boolean activo, char genero){
+    public Empleado(String nombre, int edad, char genero, boolean activo, double salario, int horasTrabajadas ){
         super(nombre, edad, activo, genero);
         this.salario = salario;
+        this.horasTrabajadas = horasTrabajadas;
     }
 
 
