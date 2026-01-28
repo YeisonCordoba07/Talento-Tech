@@ -4,8 +4,9 @@ public class Empleado extends Persona {
     private double salario;
     private int horasTrabajadas;
 
-    public Empleado(String nombre, int edad, char genero, boolean activo, double salario, int horasTrabajadas) {
-        super(nombre, edad, activo, genero);
+
+    public Empleado(int id, String nombre, int edad, char genero, boolean activo, double salario, int horasTrabajadas) {
+        super(id, nombre, edad, activo, genero);
         this.salario = salario;
         this.horasTrabajadas = horasTrabajadas;
     }
@@ -44,6 +45,8 @@ public class Empleado extends Persona {
     public boolean puedeTrabajar() {
         return esMayorDeEdad() && isActivo();
     }
+
+
 
     public String clasificarEmpleado(){
         if(edad < 18){

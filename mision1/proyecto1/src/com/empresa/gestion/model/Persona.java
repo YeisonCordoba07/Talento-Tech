@@ -5,14 +5,16 @@ public class Persona {
     protected int edad;
     protected boolean activo;
     protected char genero;
+    protected int id;
 
 
 
-    public Persona(String nombre, int edad, boolean activo, char genero) {
+    public Persona(int id, String nombre, int edad, boolean activo, char genero) {
         this.nombre = nombre;
         this.edad = edad;
         this.activo = activo;
         this.genero = genero;
+        this.id = id;
     }
 
 
@@ -49,6 +51,10 @@ public class Persona {
 
     public void setGenero(char genero){
         this.genero = genero;
+    }
+
+    public int getId(){
+        return this.id;
     }
 
     public void mostrarInformacionBasica(){
