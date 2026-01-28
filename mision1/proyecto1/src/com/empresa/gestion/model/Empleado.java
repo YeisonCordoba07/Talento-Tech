@@ -66,4 +66,9 @@ public class Empleado extends Persona {
             default -> "No especificado";
         };
     }
+
+    public String resumen(){
+        String informacion = "Id: " + this.id + "\nNombre: " + this.nombre + "\nEdad: "+ this.edad;
+        return informacion;
+    }
 }
