@@ -50,6 +50,8 @@ public class Main2 {
     }
 
 
+
+
     private static int menuEmpleado(){
         int opcion;
 
@@ -64,6 +66,9 @@ public class Main2 {
         return opcion;
     }
     
+
+
+
     private static void ejecutarOpcion(int opcion){
         switch (opcion) {
             case 1 -> agregarEmpleado();
@@ -91,12 +96,17 @@ public class Main2 {
 
 
 
+
+
+    
+
     public static void main(String[] arg) {
 
         // Crear 3 empleados iniciales
         empleadoService.agregar(new Empleado(1, "Juan García", 35, 'M', true, 2500000, 160));
         empleadoService.agregar(new Empleado(2, "María López", 28, 'F', true, 2200000, 160));
         empleadoService.agregar(new Empleado(3, "Carlos Rodríguez", 42, 'M', true, 3000000, 160));
+
 
         int opcion;
         do { 
