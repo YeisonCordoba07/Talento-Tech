@@ -42,6 +42,15 @@ public class EmpleadoService {
             System.out.println(e.resumen());
         }
 
-        
+    }
+
+    public void consultarEmpleado(int id){
+        for (Empleado e : empleados) {
+
+            if(e.getId() == id){
+                System.out.println(e.resumen());
+                return;
+            }
+        }
     }
 }
