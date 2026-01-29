@@ -4,7 +4,6 @@ public class Empleado extends Persona {
     private double salario;
     private int horasTrabajadas;
 
-
     public Empleado(int id, String nombre, int edad, char genero, boolean activo, double salario, int horasTrabajadas) {
         super(id, nombre, edad, activo, genero);
         this.salario = salario;
@@ -46,20 +45,17 @@ public class Empleado extends Persona {
         return esMayorDeEdad() && isActivo();
     }
 
-
-
-    public String clasificarEmpleado(){
-        if(edad < 18){
+    public String clasificarEmpleado() {
+        if (edad < 18) {
             return "Menor de edad (No puede trabajar)";
-        }
-        else if(edad <= 60){
+        } else if (edad <= 60) {
             return "Empleado activo";
-        }else{
+        } else {
             return "Empleado en edad de retiro";
         }
     }
 
-    public String obtenerTipoEmpleado(){
+    public String obtenerTipoEmpleado() {
         return switch (genero) {
             case 'M' -> "Masculino";
             case 'F' -> "Femenino";
@@ -67,8 +63,15 @@ public class Empleado extends Persona {
         };
     }
 
-    public String resumen(){
-        String informacion = "Id: " + this.id + "\nNombre: " + this.nombre + "\nEdad: "+ this.edad;
+    public String resumen() {
+        String informacion = "Id: " + this.id + 
+        "\nNombre: " + this.nombre + 
+        "\nEdad: " + this.edad +
+        "\nGénero: " + this.genero + 
+        "\nActivo: " + this.activo +
+        "\nSalario: " + this.salario + 
+        "\nHoras Trabajadas: " + this.horasTrabajadas +
+        "\n\n";
         return informacion;
     }
 }
