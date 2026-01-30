@@ -3,6 +3,9 @@ import { UserComponent } from './view/user.component/user.component';
 
 export const routes: Routes = [
     {
+        path: '', redirectTo:'users', pathMatch:'full'
+    },
+    {
         path: 'users', component: UserComponent
     }
 ];
