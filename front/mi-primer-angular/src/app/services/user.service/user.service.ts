@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { map } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -11,6 +12,11 @@ export class UserService {
     }
 
     getUsers(){
-        return this.http.get<any[]>("users.json");
+        const variable = this.http.get<any>("https://rickandmortyapi.com/api/character").pipe(
+        map(response => response.results)
+      );
+
+        return variable
+        
     }
 }

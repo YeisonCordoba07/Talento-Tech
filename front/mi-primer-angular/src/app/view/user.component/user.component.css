@@ -1,0 +1,10 @@
+.contenedor-user {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(256px, 1fr));
+  gap: 15px;
+  padding: 16px;
+}
+
+.card-style {
+  min-width: 256px;
+}

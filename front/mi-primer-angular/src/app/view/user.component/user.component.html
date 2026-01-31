@@ -1,15 +1,17 @@
-<p>user.component works!</p>
-
-<ul>
-    <li *ngFor="let u of users">
-        {{u.name}} - {{u.email}}
-    </li>
-</ul>
-<ul>
+<div>
     
-    @for(u of users; track u.id){
-        <li>{{u.name}} - {{u.email}}</li>
-    }
-</ul>
+    <div class="contenedor-user border border-dark-subtle rounded">
+        
+        @for(u of users; track u.id){
+            <div class="card card-style">
+                <img [src]="u.image" alt="" class="card-imag-top"/>
+                <div class="card-body">
+                    <h5 class="card-title">{{u.name}}</h5>
+                    <p class="card-text">Gender: {{u.gender}}, status: {{u.status}}, Especie: {{u.status}}</p>
+                </div>
+            </div>
+        }
+    </div>
+</div>
 
 <button class="btn btn-primary">hola</button>
