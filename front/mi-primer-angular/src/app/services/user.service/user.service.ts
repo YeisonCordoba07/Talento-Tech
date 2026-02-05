@@ -12,9 +12,7 @@ export class UserService {
     }
 
     getUsers(){
-        const variable = this.http.get<any>("https://rickandmortyapi.com/api/character").pipe(
-        map(response => response.results)
-      );
+        const variable = this.http.get<any>("https://rickandmortyapi.com/api/character");
 
         return variable
         

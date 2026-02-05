@@ -15,7 +15,7 @@ export class UserComponent {
   constructor(private userService: UserService, private changeDetector: ChangeDetectorRef){
 
     this.userService.getUsers().subscribe(data =>{
-        this.users = data;
+        this.users = data.results;
         console.log(this.users);
         this.detectChange();
     })
